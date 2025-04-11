@@ -1,4 +1,4 @@
-package org.oscartrugo.springcloud.msvc.cursos;
+package org.oscartrugo.springcloud.msvc.cursos.controller;
 
 import org.oscartrugo.springcloud.msvc.cursos.entity.Curso;
 import org.oscartrugo.springcloud.msvc.cursos.services.CursoService;
