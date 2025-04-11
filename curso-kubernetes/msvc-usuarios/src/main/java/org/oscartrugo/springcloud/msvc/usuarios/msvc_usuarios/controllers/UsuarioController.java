@@ -22,10 +22,10 @@ public class UsuarioController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> obtenerUsuario(@PathVariable("id") Long id) {
-        Optional<Usuario> usuario = service.porId(id);
-        if(usuario.isPresent()) {
-            return ResponseEntity.ok(usuario.get());
+    public ResponseEntity<?> detalle(@PathVariable("id") Long id) {
+        Optional<Usuario> usuarioOptional = service.porId(id);
+        if(usuarioOptional.isPresent()) {
+            return ResponseEntity.ok(usuarioOptional.get());
         }
         return ResponseEntity.notFound().build();
     }
@@ -51,5 +51,16 @@ public class UsuarioController {
         }
         return ResponseEntity.notFound().build();
     }
-    
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> eliminar(@PathVariable Long id) {
+        Optional<Usuario> o = service.porId(id);
+        if(o.isPresent()) {
+            service.eliminar(id);
+            return ResponseEntity
+                    .noContent()
+                    .build();
+        }
+        return ResponseEntity.notFound().build();
+    }
 }
