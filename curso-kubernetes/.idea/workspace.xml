@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b2bbff58-17a7-4884-954c-b17e48dbdf62" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/CursoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/controller/CursoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msvc-cursos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-cursos/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/controller/CursoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/controller/CursoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/entity/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/entity/Curso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msvc-usuarios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-usuarios/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msvc-usuarios/src/main/java/org/oscartrugo/springcloud/msvc/usuarios/msvc_usuarios/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-usuarios/src/main/java/org/oscartrugo/springcloud/msvc/usuarios/msvc_usuarios/controllers/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msvc-usuarios/src/main/java/org/oscartrugo/springcloud/msvc/usuarios/msvc_usuarios/models/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-usuarios/src/main/java/org/oscartrugo/springcloud/msvc/usuarios/msvc_usuarios/models/entity/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +60,7 @@
     &quot;last_opened_file_path&quot;: &quot;D:/GitHub/Microservicios_Docker_Kubernetes/curso-kubernetes&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.MsvcCursosApplication">
+  <component name="RunManager" selected="Application.MsvcUsuariosApplication">
     <configuration name="MsvcCursosApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.oscartrugo.springcloud.msvc.cursos.MsvcCursosApplication" />
       <module name="msvc-cursos" />
@@ -86,8 +89,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MsvcCursosApplication" />
         <item itemvalue="Application.MsvcUsuariosApplication" />
+        <item itemvalue="Application.MsvcCursosApplication" />
       </list>
     </recent_temporary>
   </component>

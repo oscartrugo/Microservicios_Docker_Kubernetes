@@ -1,13 +1,17 @@
 package org.oscartrugo.springcloud.msvc.usuarios.msvc_usuarios.controllers;
 
+import jakarta.validation.Valid;
 import org.oscartrugo.springcloud.msvc.usuarios.msvc_usuarios.models.entity.Usuario;
 import org.oscartrugo.springcloud.msvc.usuarios.msvc_usuarios.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -31,14 +35,24 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public ResponseEntity<?> crear(@RequestBody Usuario usuario) {
+    public ResponseEntity<?> crear(@Valid @RequestBody Usuario usuario, BindingResult result) {
+
+        if(result.hasErrors()) { //Si el result tiene errores
+            return validar(result);
+
+        }
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(service.guardar(usuario));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> editar(@RequestBody Usuario usuario, @PathVariable("id") Long id) {
+    public ResponseEntity<?> editar(@Valid @RequestBody Usuario usuario, BindingResult result, @PathVariable("id") Long id) {
+
+        if(result.hasErrors()) {
+            return validar(result);
+        }
+
         Optional<Usuario> o = service.porId(id);
         if(o.isPresent()) {
             Usuario usuarioDB = o.get();
@@ -63,4 +77,13 @@ public class UsuarioController {
         }
         return ResponseEntity.notFound().build();
     }
+
+    private static ResponseEntity<Map<String, String>> validar(BindingResult result) {
+        Map<String, String> errores = new HashMap<>();
+        result.getFieldErrors().forEach(e -> {
+            errores.put(e.getField(), "El campo " + e.getField() + " " + e.getDefaultMessage());
+        });
+        return ResponseEntity.badRequest().body(errores);
+    }
+
 }
