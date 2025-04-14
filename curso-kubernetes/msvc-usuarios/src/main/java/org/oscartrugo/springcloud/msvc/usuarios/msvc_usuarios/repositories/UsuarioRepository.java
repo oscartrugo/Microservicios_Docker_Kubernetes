@@ -4,7 +4,9 @@ import org.oscartrugo.springcloud.msvc.usuarios.msvc_usuarios.models.entity.Usua
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface UsuarioRepository extends CrudRepository<Usuario, Long> {
-
+    Optional<Usuario> findByEmail(String email);
 }

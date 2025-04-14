@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b2bbff58-17a7-4884-954c-b17e48dbdf62" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/controller/CursoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/controller/CursoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/entity/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/entity/Curso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msvc-usuarios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-usuarios/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msvc-usuarios/src/main/java/org/oscartrugo/springcloud/msvc/usuarios/msvc_usuarios/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-usuarios/src/main/java/org/oscartrugo/springcloud/msvc/usuarios/msvc_usuarios/controllers/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msvc-usuarios/src/main/java/org/oscartrugo/springcloud/msvc/usuarios/msvc_usuarios/models/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-usuarios/src/main/java/org/oscartrugo/springcloud/msvc/usuarios/msvc_usuarios/models/entity/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msvc-usuarios/src/main/java/org/oscartrugo/springcloud/msvc/usuarios/msvc_usuarios/repositories/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-usuarios/src/main/java/org/oscartrugo/springcloud/msvc/usuarios/msvc_usuarios/repositories/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msvc-usuarios/src/main/java/org/oscartrugo/springcloud/msvc/usuarios/msvc_usuarios/services/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-usuarios/src/main/java/org/oscartrugo/springcloud/msvc/usuarios/msvc_usuarios/services/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msvc-usuarios/src/main/java/org/oscartrugo/springcloud/msvc/usuarios/msvc_usuarios/services/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-usuarios/src/main/java/org/oscartrugo/springcloud/msvc/usuarios/msvc_usuarios/services/UsuarioServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
