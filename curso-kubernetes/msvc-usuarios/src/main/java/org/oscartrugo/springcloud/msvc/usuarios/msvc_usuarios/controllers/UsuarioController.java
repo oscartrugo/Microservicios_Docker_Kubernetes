@@ -33,14 +33,14 @@ public class UsuarioController {
 
     @PostMapping
     public ResponseEntity<?> crear(@Valid @RequestBody Usuario usuario, BindingResult result) {
-        if(service.porEmail(usuario.getEmail()).isPresent()) {
-            return ResponseEntity.badRequest()
-                    .body(Collections
-                            .singletonMap("mensaje", "Ya existe un usuario con este email"));
-        }
         if(result.hasErrors()) { //Si el result tiene errores
             return validar(result);
 
+        }
+        if(!usuario.getEmail().isEmpty() && service.existePorEmail(usuario.getEmail())) {
+            return ResponseEntity.badRequest()
+                    .body(Collections
+                            .singletonMap("mensaje", "Ya existe un usuario con este email"));
         }
         return ResponseEntity
                 .status(HttpStatus.CREATED)
@@ -57,7 +57,9 @@ public class UsuarioController {
         Optional<Usuario> o = service.porId(id);
         if(o.isPresent()) {
             Usuario usuarioDB = o.get();
-            if(!usuario.getEmail().equals(usuarioDB.getEmail()) && service.porEmail(usuario.getEmail()).isPresent()) {
+            if(!usuario.getEmail().isEmpty() &&
+                    !usuario.getEmail().equals(usuarioDB.getEmail()) &&
+                    service.porEmail(usuario.getEmail()).isPresent()) {
                 return ResponseEntity.badRequest()
                         .body(Collections
                                 .singletonMap("mensaje", "Ya existe un usuario con este email"));
