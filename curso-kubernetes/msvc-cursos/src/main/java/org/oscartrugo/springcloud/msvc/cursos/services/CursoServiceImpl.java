@@ -1,6 +1,7 @@
 package org.oscartrugo.springcloud.msvc.cursos.services;
 
-import org.oscartrugo.springcloud.msvc.cursos.models.Usuario;
+import org.oscartrugo.springcloud.msvc.cursos.clients.UsuarioClientRest;
+import org.oscartrugo.springcloud.msvc.cursos.models.dto.Usuario;
 import org.oscartrugo.springcloud.msvc.cursos.models.entity.Curso;
 import org.oscartrugo.springcloud.msvc.cursos.repositories.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,9 @@ public class CursoServiceImpl implements CursoService{
 
     @Autowired
     private CursoRepository repository;
+
+    @Autowired
+    private UsuarioClientRest client;
 
     @Override
     @Transactional(readOnly = true)

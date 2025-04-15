@@ -1,6 +1,6 @@
 package org.oscartrugo.springcloud.msvc.cursos.models.entity;
 
-import org.oscartrugo.springcloud.msvc.cursos.models.Usuario;
+import org.oscartrugo.springcloud.msvc.cursos.models.dto.Usuario;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 

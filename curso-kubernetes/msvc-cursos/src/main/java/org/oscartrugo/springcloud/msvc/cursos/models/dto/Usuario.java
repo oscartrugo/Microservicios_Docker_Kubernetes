@@ -1,4 +1,4 @@
-package org.oscartrugo.springcloud.msvc.cursos.models;
+package org.oscartrugo.springcloud.msvc.cursos.models.dto;
 
 public class Usuario {
     private Long id;
