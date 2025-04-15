@@ -1,6 +1,6 @@
 package org.oscartrugo.springcloud.msvc.cursos.repositories;
 
-import org.oscartrugo.springcloud.msvc.cursos.entity.Curso;
+import org.oscartrugo.springcloud.msvc.cursos.models.entity.Curso;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

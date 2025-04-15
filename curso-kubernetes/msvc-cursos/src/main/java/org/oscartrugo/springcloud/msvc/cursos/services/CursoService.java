@@ -1,6 +1,6 @@
 package org.oscartrugo.springcloud.msvc.cursos.services;
 
-import org.oscartrugo.springcloud.msvc.cursos.entity.Curso;
+import org.oscartrugo.springcloud.msvc.cursos.models.entity.Curso;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,7 +1,7 @@
 package org.oscartrugo.springcloud.msvc.cursos.controller;
 
 import jakarta.validation.Valid;
-import org.oscartrugo.springcloud.msvc.cursos.entity.Curso;
+import org.oscartrugo.springcloud.msvc.cursos.models.entity.Curso;
 import org.oscartrugo.springcloud.msvc.cursos.services.CursoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

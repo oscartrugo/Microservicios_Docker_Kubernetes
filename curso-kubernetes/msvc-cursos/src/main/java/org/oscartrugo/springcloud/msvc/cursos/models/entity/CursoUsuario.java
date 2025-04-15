@@ -1,8 +1,6 @@
-package org.oscartrugo.springcloud.msvc.cursos.entity;
+package org.oscartrugo.springcloud.msvc.cursos.models.entity;
 
 import jakarta.persistence.*;
-
-import java.util.Objects;
 
 @Entity
 @Table(name = "cursos_usuarios")
