@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2bbff58-17a7-4884-954c-b17e48dbdf62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/models/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/controller/CursoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/controller/CursoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/entity/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/models/entity/Curso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/entity/CursoUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/models/entity/CursoUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/repositories/CursoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/repositories/CursoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/services/CursoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/services/CursoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/services/CursoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/msvc-cursos/src/main/java/org/oscartrugo/springcloud/msvc/cursos/services/CursoServiceImpl.java" afterDir="false" />
     </list>
