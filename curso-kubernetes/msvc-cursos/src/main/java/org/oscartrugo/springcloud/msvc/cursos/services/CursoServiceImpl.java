@@ -3,6 +3,7 @@ package org.oscartrugo.springcloud.msvc.cursos.services;
 import org.oscartrugo.springcloud.msvc.cursos.clients.UsuarioClientRest;
 import org.oscartrugo.springcloud.msvc.cursos.models.dto.Usuario;
 import org.oscartrugo.springcloud.msvc.cursos.models.entity.Curso;
+import org.oscartrugo.springcloud.msvc.cursos.models.entity.CursoUsuario;
 import org.oscartrugo.springcloud.msvc.cursos.repositories.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -45,17 +46,59 @@ public class CursoServiceImpl implements CursoService{
     }
 
     @Override
+    @Transactional
     public Optional<Usuario> asignarUsuario(Usuario usuario, Long id) {
+        Optional<Curso> optionalCurso = repository.findById(id);
+        if (optionalCurso.isPresent()) {
+            Usuario usuarioMsvc = client.detalle(usuario.getId());
+
+            Curso curso = optionalCurso.get();
+
+            CursoUsuario cursoUsuario = new CursoUsuario();
+            cursoUsuario.setUsuarioId(usuarioMsvc.getId());
+
+            curso.addCursoUsuario(cursoUsuario);
+            repository.save(curso);
+            return Optional.of(usuarioMsvc);
+        }
         return Optional.empty();
     }
 
     @Override
+    @Transactional
     public Optional<Usuario> crearUsuario(Usuario usuario, Long id) {
+        Optional<Curso> optionalCurso = repository.findById(id);
+        if (optionalCurso.isPresent()) {
+            Usuario usuarioNuevoMsvc = client.crear(usuario);
+
+            Curso curso = optionalCurso.get();
+
+            CursoUsuario cursoUsuario = new CursoUsuario();
+            cursoUsuario.setUsuarioId(usuarioNuevoMsvc.getId());
+
+            curso.addCursoUsuario(cursoUsuario);
+            repository.save(curso);
+            return Optional.of(usuarioNuevoMsvc);
+        }
         return Optional.empty();
     }
 
     @Override
+    @Transactional
     public Optional<Usuario> eliminarUsuario(Usuario usuario, Long cursoId) {
+        Optional<Curso> optionalCurso = repository.findById(cursoId);
+        if (optionalCurso.isPresent()) {
+            Usuario usuarioMsvc = client.detalle(usuario.getId());
+
+            Curso curso = optionalCurso.get();
+
+            CursoUsuario cursoUsuario = new CursoUsuario();
+            cursoUsuario.setUsuarioId(usuarioMsvc.getId());
+
+            curso.removeCursoUsuario(cursoUsuario);
+            repository.save(curso);
+            return Optional.of(usuarioMsvc);
+        }
         return Optional.empty();
     }
 }
