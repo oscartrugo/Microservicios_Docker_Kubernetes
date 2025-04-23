@@ -5,6 +5,8 @@ import jakarta.validation.Valid;
 import org.oscartrugo.springcloud.msvc.cursos.models.dto.Usuario;
 import org.oscartrugo.springcloud.msvc.cursos.models.entity.Curso;
 import org.oscartrugo.springcloud.msvc.cursos.services.CursoService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +23,8 @@ public class CursoController {
 
     @Autowired
     private CursoService service;
+
+    private static final Logger log = LoggerFactory.getLogger(CursoController.class);
 
     @GetMapping
     public ResponseEntity<?> listar() {
@@ -105,13 +109,15 @@ public class CursoController {
     public ResponseEntity<?> eliminarUsuario(@RequestBody Usuario usuario, @PathVariable Long cursoId) {
         Optional<Usuario> optionalUsuario;
         try {
-            optionalUsuario = service.asignarUsuario(usuario, cursoId);
+            optionalUsuario = service.eliminarUsuario(usuario, cursoId);
         } catch (FeignException e) {
+            log.error("Error al intentar eliminar un usuario de un curso: " + e.getMessage(), e);
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(Collections.singletonMap("mensaje", "No existe el usuario: " + e.getMessage()));
         }
         if (optionalUsuario.isPresent()) {
+            log.info("Usuario eliminado correctamente: " + optionalUsuario.get().getNombre());
             return ResponseEntity.status(HttpStatus.OK).body(optionalUsuario.get());
         }
         return ResponseEntity.notFound().build();

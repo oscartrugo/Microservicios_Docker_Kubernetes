@@ -53,7 +53,6 @@ public class CursoServiceImpl implements CursoService{
             Usuario usuarioMsvc = client.detalle(usuario.getId());
 
             Curso curso = optionalCurso.get();
-
             CursoUsuario cursoUsuario = new CursoUsuario();
             cursoUsuario.setUsuarioId(usuarioMsvc.getId());
 
@@ -72,7 +71,6 @@ public class CursoServiceImpl implements CursoService{
             Usuario usuarioNuevoMsvc = client.crear(usuario);
 
             Curso curso = optionalCurso.get();
-
             CursoUsuario cursoUsuario = new CursoUsuario();
             cursoUsuario.setUsuarioId(usuarioNuevoMsvc.getId());
 
@@ -91,7 +89,6 @@ public class CursoServiceImpl implements CursoService{
             Usuario usuarioMsvc = client.detalle(usuario.getId());
 
             Curso curso = optionalCurso.get();
-
             CursoUsuario cursoUsuario = new CursoUsuario();
             cursoUsuario.setUsuarioId(usuarioMsvc.getId());
 
